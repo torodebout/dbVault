@@ -160,8 +160,8 @@ Temporary Items
 *~
 
 # Project specific
-config.yaml
-config*.yaml
+# config.yaml
+# config*.yaml
 backups/
 *.bak
 *.tmp

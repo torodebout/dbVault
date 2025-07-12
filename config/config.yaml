@@ -1,0 +1,21 @@
+database:
+  type: "${DB_TYPE:-postgresql}" # "postgresql" or "mongodb", defaults to postgresql
+  host: "${DB_HOST:-localhost}"
+  port: "${DB_PORT:-5432}"
+  database: "${DB_NAME}"
+  username: "${DB_USERNAME}"
+  password: "${DB_PASSWORD}"
+
+storage:
+  local:
+    path: "${BACKUP_PATH:-~/backups}" # defaults to ~/backups
+  aws:
+    bucket: "${AWS_S3_BUCKET}"
+    region: "${AWS_REGION}"
+    access_key: "${AWS_ACCESS_KEY_ID}"
+    secret_key: "${AWS_SECRET_ACCESS_KEY}"
+
+backup:
+  compression: true
+  default_storage: "${DEFAULT_STORAGE:-local}" # "local" or "s3", defaults to local
+
